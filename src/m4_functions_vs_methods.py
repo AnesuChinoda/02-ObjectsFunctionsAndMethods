@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Anesu Chinoda.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 # Part 1:  CONSTRUCTING objects, applying ** METHODS ** to them:
@@ -80,8 +80,9 @@ def main():
 
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
-
-    turtle3()
+    #try_methods()
+    #try_functions()
+    try_methods_and_functions()
 
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
@@ -181,10 +182,15 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function, per its doc-string above.
+    # Done: 3. Implement and test this function, per its doc-string above.
     #     (To test it, put a statement in   main   that calls this function.)
     ###########################################################################
-
+    nes = rg.SimpleTurtle()
+    nes.pen = rg.Pen('brown',5)
+    nes.forward(150)
+    nes.left(90)
+    nes.forward(50)
+    nes.backward(100)
 
 def try_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
@@ -195,7 +201,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # Done: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
@@ -204,6 +210,9 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     #
     ###########################################################################
+    jumper = jump_and_move_turtle(200,100,300,30)
+    maja = jump_and_move_turtle(100,200,0,0)
+    nes = jump_and_move_turtle(-50,50,100,100)
 
 
 def try_methods_and_functions():
@@ -240,7 +249,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # Done: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
@@ -248,6 +257,27 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ###########################################################################
+    wes = rg.SimpleTurtle()
+    wes.pen=rg.Pen('blue', 5)
+
+    wes.backward(150)
+    wes.speed=1
+    for k in range(2):
+        wes.draw_square(100)
+    wes.speed=5
+    wes.pen=rg.Pen('red',5)
+    for k in range(10):
+        wes.draw_square(50)
+    wes.speed=100
+    wes.pen=rg.Pen('red',35)
+    for k in range(8):
+        wes.draw_square(300)
+        wes.left(60)
+    wes.pen=rg.Pen('black',3)
+    wes.backward(200)
+    wes.draw_circle(30)
+    wes.draw_square(50)
+
 
 
 # -----------------------------------------------------------------------------
